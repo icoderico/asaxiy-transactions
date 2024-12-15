@@ -136,7 +136,7 @@ const Analytics = () => {
         </div>
         <div className="shadow lg:w-1/2 border p-3 flex items-center gap-10 rounded-md">
           <div className="lg:w-60 w-48">
-            <h1 className="text-xl ">Kirimlar</h1>
+            <h1 className="text-xl ">Chiqimlar</h1>
             <Doughnut data={data2} options={options} />
             <h1 className="text-xl text-center">
               <AnimatedNumber
