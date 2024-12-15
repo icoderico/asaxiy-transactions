@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("/fonts/CustomFont-Regular.woff2") format("woff2"),
+    url("/fonts/CustomFont-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("/fonts/CustomFont-Bold.woff2") format("woff2"),
+    url("/fonts/CustomFont-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.animated-refresh-icon {
+  animation: refreshIcon 1s linear infinite;
+}
+
+@keyframes refreshIcon {
+  100% {
+    rotate: -360deg;
+  }
+}
