@@ -66,20 +66,22 @@ const Converter = () => {
   return (
     <div>
       <div className="w-full  text-white  border bg-[#006bff] rounded-xl overflow-hidden shadow flex">
-        <div className="w-[93%]">
+        <div className="lg:w-[93%] w-[82%]">
           <input
             placeholder="0.00"
             type="number"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="h-36 w-full p-2 bg-transparent placeholder:text-white  text-[60px] outline-none appearance-none  [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
+            className="lg:h-36 h-20 w-full p-2 bg-transparent placeholder:text-white  lg:text-[60px] text-[40px] outline-none appearance-none  [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
           />
-          <h2 className="px-3 py-2 text-gray-200 text-xl">Miqdorni kiriting</h2>
+          <h2 className="px-3 py-2 text-gray-200 lg:text-xl">
+            Miqdorni kiriting
+          </h2>
         </div>
 
         <div
           onClick={handleOpen}
-          className="bg-white cursor-pointer w-[7%] text-3xl flex items-center justify-center text-[#006bff]"
+          className="bg-white cursor-pointer lg:w-[7%] w-[18%] lg:text-3xl flex items-center justify-center text-[#006bff]"
         >
           {base}
         </div>
@@ -132,22 +134,22 @@ const Converter = () => {
           load ? "opacity-40" : null
         }  text-[#006bff]   rounded-xl overflow-hidden shadow flex`}
       >
-        <div className="w-[93%]">
+        <div className="lg:w-[93%] w-[82%]">
           <input
             placeholder="0.00"
             type="number"
             readOnly
             value={resultValue?.conversion_result}
-            className="h-36 w-full p-2 bg-transparent placeholder:text-[#006bff]  text-[60px] outline-none appearance-none  [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
+            className="lg:h-36 h-20 w-full p-2 bg-transparent placeholder:text-[#006bff]  lg:text-[60px] text-[40px] outline-none appearance-none  [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
           />
-          <h2 className="px-3 py-2 text-gray-600 text-xl">
+          <h2 className="px-3 py-2 text-gray-600 lg:text-xl">
             Konvertatsiya qilingan holati
           </h2>
         </div>
 
         <div
           onClick={handleOpen2}
-          className="bg-[#006bff] cursor-pointer w-[7%] text-3xl flex items-center justify-center text-white"
+          className="bg-[#006bff] cursor-pointer lg:w-[7%] w-[18%] lg:text-3xl flex items-center justify-center text-white"
         >
           {target}
         </div>
