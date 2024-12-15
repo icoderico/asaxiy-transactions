@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 import useDebounce from "../../hooks/useDebounce";
 import axios from "axios";
 import debounce from "lodash.debounce";
+import { BASE_API } from ".";
 
 const Converter = () => {
   const [base, setBase] = useState("USD");
@@ -40,11 +41,7 @@ const Converter = () => {
     if (debouncedQuery) {
       setLoad(true);
       axios
-        .get(
-          `${
-            import.meta.env.VITE_API_URL
-          }/pair/${base}/${target}/${debouncedQuery}`
-        )
+        .get(`${BASE_API}/pair/${base}/${target}/${debouncedQuery}`)
         .then((res) => {
           setResultValue(res?.data);
           setLoad(false);
@@ -54,14 +51,12 @@ const Converter = () => {
 
   useEffect(() => {
     if (open || open2) {
-      axios
-        .get(`${import.meta.env.VITE_API_URL}/latest/${base}`)
-        .then((res) => {
-          setCurrency(res?.data?.conversion_rates);
-          setFilteredRates(res?.data?.conversion_rates);
-          console.log(res);
-          setLoad(false);
-        });
+      axios.get(`${BASE_API}/latest/${base}`).then((res) => {
+        setCurrency(res?.data?.conversion_rates);
+        setFilteredRates(res?.data?.conversion_rates);
+        console.log(res);
+        setLoad(false);
+      });
     }
   }, [open, open2]);
 
