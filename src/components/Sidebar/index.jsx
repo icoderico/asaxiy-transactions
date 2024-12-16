@@ -36,7 +36,7 @@ const Sidebar = ({ open }) => {
 
       <div
         style={{ borderRadius: "20px 20px 0 0" }}
-        className=" lg:hidden  bottom-0 bg-blue-800  h-16 fixed w-full justify-around px-3 items-center flex "
+        className=" lg:hidden  bottom-0 bg-blue-800  z-50 h-16 fixed w-full justify-around px-3 items-center flex "
       >
         {content?.map((con) => (
           <Link to={con?.href} className="bg-white p-3 rounded-full">
